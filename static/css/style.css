@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    margin-top: 70px !important;
+}
+.navbar-brand{
+    font-size: 30px !important;
+    margin-top: 20px !important;
+}
+
+.navbar-nav>li{
+    margin-top: 20px;
+    margin-right: 15px;
+}
+
+.panel{
+    margin-top: 40px;
+}
+
+/*首页设置*/
+.home_content{
+    font-size: 222%;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+#container{
+    margin: 0 auto;
+    height: 40em;
+    min-width: 20em;
+    max-width: 80em;
+}
+
+/*首页设置结束*/
+.blog_type{
+     list-style-type: none;
+}
+
+
+.blog:not(:last-child){
+    border-bottom: 1px solid #cccccc;
+}
+
+.blog>h3{
+    margin-top: 40px;
+}
+
+.blog_info_con{
+    list-style-type: none;
+    margin-bottom: 2em;
+}
+
+.blog_info_con>li{
+    display: inline-block;
+    margin-right: 2em;
+}
+
+.blog_content{
+    text-indent: 2em;
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+
+.blog_more{
+    margin-top: 2em;
+}
+
+.hot-data{
+    text-align: center;
+    margin-top: 1em;
+}
+
+/*评论区域设置*/
+.comment-area{
+    margin-top: 2em;
+}
+.comment-area-title{
+    border-bottom: 1px solid grey;
+    padding-bottom: 0.4em;
+}
+
+.django-ckeditor-widget{
+    width: 100%;
+}
+
+.comment{
+    border-bottom: 1px dashed #cccccc;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.reply{
+    margin-left: 2em;
+}
+
+#reply_content_container{
+    border: 1px solid #d1d1d1;
+    border-bottom: none;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    padding: 1em 1em 0.5em;
+}
+
+
+#reply_title{
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.5em;
+}
+
+.like{
+    color: #337ab7;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0.5em 0.3em;
+}
+
+.like .active{
+    color: #f22;
+}
+
+

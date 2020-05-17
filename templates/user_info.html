@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+# 标题
+{% block title%}
+    我的网站|注册
+{% endblock %}
+{% block nav_home_avtive %}active{% endblock %}
+{% block content%}
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                {% if user.is_authenticated %}
+                   <h2>{{ user.username }}</h2>
+                    <ul style="line-height: 5em;">
+                        <li>昵称：{{ user.get_nickname_or_username }}
+                            <a href="{% url 'user:change_nick_name' %}?from={{ request.get_full_path }}">修改昵称</a>
+                        </li>
+                        <li>邮箱：
+                            {% if user.email %}
+                                {{ user.email }}
+                            {% else %}
+                                未绑定&nbsp;<a href="{% url 'user:bind_email' %}">绑定邮箱</a>
+                            {% endif %}
+                        </li>
+                        <li>
+                            上一次登录的时间：
+                            {{ user.last_login }}
+                        </li>
+                        <li><a href="{% url 'user:change_password' %}">修改密码</a></li>
+                    </ul>
+                {% else %}
+                    <span>未登录，跳转到首页... ...</span>
+                    <script>
+                        setTimeout(function () {
+                            window.location.href = "/";
+                        }, 1000);
+                    </script>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

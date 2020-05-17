@@ -1,0 +1,15 @@
+{% extends "blog/blog_list.html" %}
+{#页面标题#}
+{% block title %}
+     {% for i in blog_type %}
+        我的博客网站--{{ i }}
+    {% endfor %}
+{% endblock %}
+
+{% block blog_list_title %}
+    {% for i in blog_type %}
+        <span>{{ i }}</span>
+    {% endfor %}
+    <a href="{% url 'blog:blog_list' %}">查看全部博客</a>
+{% endblock %}
+
